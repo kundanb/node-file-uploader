@@ -1,0 +1,15 @@
+{
+  "name": "node-file-uploader",
+  "version": "1.0.0",
+  "description": "Simple File Uploader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kundanb/node-file-uploader.git"
+  },
+  "author": "Kundan Bhasin <kundanbhasin11062000@gmail.com> (https://kundanb.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kundanb/node-file-uploader/issues"
+  },
+  "homepage": "https://github.com/kundanb/node-file-uploader#readme"
+}
