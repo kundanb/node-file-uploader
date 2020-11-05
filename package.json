@@ -2,6 +2,10 @@
   "name": "node-file-uploader",
   "version": "1.0.0",
   "description": "Simple File Uploader",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kundanb/node-file-uploader.git"
