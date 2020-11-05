@@ -1,0 +1,58 @@
+:root {
+  --clr-prim: #3f51b5;
+  --clr-prim-light: #e8eaf6;
+  --clr-prim-dark: #1a237e;
+  --clr-light: #ffffff;
+  --clr-dark: #1b1e23;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  transition: 0.15s;
+}
+
+body {
+  background: var(--clr-dark);
+  background-attachment: fixed;
+  color: #1b1e23;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input,
+select,
+button {
+  display: block;
+  background: transparent;
+}
+
+#app {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#branding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--clr-prim-light);
+}
+
+.file-card {
+  margin-top: 1em;
+  padding: 2px;
+  border-radius: 5px;
+}
