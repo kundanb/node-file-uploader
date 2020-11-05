@@ -12,7 +12,7 @@ const upload = multer({
     destination: './uploads',
     filename: (_, file, cb) => {
       const timeStamp = new Date().getTime();
-      cb(null, file.originalname + '-' + timeStamp);
+      cb(null, timeStamp + '-' + file.originalname);
     },
   }),
 });
