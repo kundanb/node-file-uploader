@@ -36,23 +36,28 @@ button {
 }
 
 #app {
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: 50px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  padding: 1em;
+  transform: translateX(-50%);
+  width: 450px;
+  max-height: calc(100% - 100px);
+  overflow: auto;
   background-color: #fff;
   border-radius: 10px;
   text-align: center;
 }
 
 #branding {
+  padding: 1em;
+  box-shadow: 0 calc(1em + 1px) 0 -1em var(--clr-dark);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1em;
-  border-bottom: 1px solid var(--clr-dark);
+}
+
+#upload-form-ui {
+  padding: 1em;
 }
 
 .file-card {
@@ -71,6 +76,7 @@ button {
 }
 
 .main-file-card-cont button {
+  margin: 0;
   background-color: var(--clr-prim);
   border-color: var(--clr-prim-dark);
   color: #fff;
@@ -86,8 +92,7 @@ button {
 }
 
 #file-cards-cont {
-  max-height: 300px;
-  overflow: auto;
+  padding: 1em 0;
 }
 
 #file-cards-cont .file-card {
@@ -95,7 +100,7 @@ button {
   color: var(--clr-prim);
 }
 #file-cards-cont .file-card:first-child {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 #file-cards-cont .file-card:last-child {
   margin-bottom: 1em;
@@ -133,8 +138,7 @@ button {
 }
 
 #author-info {
-  margin-top: 1em;
-  padding-top: 1em;
+  padding: 1em;
   border-top: 1px solid var(--clr-dark);
 }
 
@@ -149,4 +153,10 @@ button {
 #author-info a:hover,
 #author-info a:focus {
   box-shadow: 0 4px 0 -2px var(--clr-prim);
+}
+
+@media all and (max-width: 500px) {
+  #app {
+    width: 90%;
+  }
 }
