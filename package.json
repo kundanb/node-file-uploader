@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kundanb/node-file-uploader/issues"
   },
-  "homepage": "https://github.com/kundanb/node-file-uploader#readme"
+  "homepage": "https://github.com/kundanb/node-file-uploader#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
