@@ -1,9 +1,14 @@
+if (window.location.search === '?uploaded') {
+  alert('Files uploaded!');
+  history.replaceState(null, null, '/');
+}
+
 const addFileBtn = document.querySelector('#file-adder-cont button');
 const fileCardsCont = document.getElementById('file-cards-cont');
 const uploadBtn = document.querySelector('#upload-btn-cont button');
 
 const uploadForm = document.createElement('form');
-uploadForm.action = './upload';
+uploadForm.action = '/upload';
 uploadForm.method = 'POST';
 uploadForm.enctype = 'multipart/form-data';
 uploadForm.style.display = 'none';
