@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" href="./icon.png" />
     <title>Node File Uploader</title>
+
     <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
     <div id="app">
       <div id="branding">
@@ -14,19 +17,27 @@
       </div>
 
       <div id="upload-form-ui">
-        <div id="file-adder-cont">
+        <div id="file-adder-cont" class="main-file-card-cont">
           <button class="file-card">
             <span class="txt">+ Add File</span>
           </button>
         </div>
+
+        <div id="file-cards-cont"></div>
+
+        <div id="upload-btn-cont" class="main-file-card-cont">
+          <button class="file-card" disabled>
+            <span class="txt">Upload &uarr;</span>
+          </button>
+        </div>
       </div>
 
-      <form
-        id="upload-form"
-        action="/upload"
-        method="POST"
-        enctype="multipart/form-data"
-      ></form>
+      <div id="author-info">
+        Made by
+        <a href="https://github.com/kundanb" target="_blank">@kundanb</a>
+      </div>
+
+      <script src="./script.js"></script>
     </div>
   </body>
 </html>

@@ -31,6 +31,10 @@ button {
   background: transparent;
 }
 
+button {
+  cursor: pointer;
+}
+
 #app {
   position: fixed;
   top: 50%;
@@ -48,11 +52,101 @@ button {
   justify-content: center;
   align-items: center;
   padding-bottom: 1em;
-  border-bottom: 1px solid var(--clr-prim-light);
+  border-bottom: 1px solid var(--clr-dark);
 }
 
 .file-card {
+  width: 100%;
   margin-top: 1em;
-  padding: 2px;
+  padding: 10px;
   border-radius: 5px;
+  border: 2px solid var(--clr-prim-dark);
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.file-card .txt {
+  flex: 1;
+  overflow: hidden;
+}
+
+.main-file-card-cont button {
+  background-color: var(--clr-prim);
+  border-color: var(--clr-prim-dark);
+  color: #fff;
+  text-align: center;
+}
+.main-file-card-cont button:disabled {
+  opacity: 0.7;
+}
+.main-file-card-cont button:not(:disabled):hover,
+.main-file-card-cont button:not(:disabled):focus {
+  background-color: var(--clr-prim-light);
+  color: var(--clr-prim-dark);
+}
+
+#file-cards-cont {
+  max-height: 300px;
+  overflow: auto;
+}
+
+#file-cards-cont .file-card {
+  background-color: var(--clr-prim-light);
+  color: var(--clr-prim);
+}
+#file-cards-cont .file-card:first-child {
+  margin-top: 2em;
+}
+#file-cards-cont .file-card:last-child {
+  margin-bottom: 1em;
+}
+
+#file-cards-cont .file-card .txt {
+  position: relative;
+}
+
+#file-cards-cont .file-card .txt::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #fff0 80%, var(--clr-prim-light));
+}
+
+#file-cards-cont .del-btn {
+  width: 1em;
+  height: 1em;
+  margin-left: 0.5em;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px var(--clr-prim-dark);
+  font-size: 1.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#file-cards-cont .del-btn:hover,
+#file-cards-cont .del-btn:focus {
+  background-color: var(--clr-prim);
+  color: #fff;
+}
+
+#author-info {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid var(--clr-dark);
+}
+
+#author-info a {
+  padding-bottom: 3px;
+  box-shadow: 0 2px 0 -1px var(--clr-dark);
+  text-decoration: none;
+  color: var(--clr-prim);
+  font-weight: bold;
+  font-size: 0.9em;
+}
+#author-info a:hover,
+#author-info a:focus {
+  box-shadow: 0 4px 0 -2px var(--clr-prim);
 }
